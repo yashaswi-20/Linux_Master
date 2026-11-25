@@ -12,7 +12,7 @@ netstat -tulnp  -> port currently being used
 traceroute -> ip hop tracing
 mtr -> ping & traceroute combined
 nslookup -> ip of a website
-telnet -> with portno
+telnet -> with portno  (check if some port is open in remote server from local mechine)
 hostname
 ip
 iwconfig ->wireless connection
@@ -70,6 +70,21 @@ tmux -> run process in background
 tmux new-session -s practice
 watch -n 2 date
 tmux attach-session -t practice
+nohup &  -> used to run background processes
+
+
+//file handling
+
+file ./-file* → Identifies the format/encoding safely without printing raw bytes.
+du -b inhere/maybehere07/.file2   -> exact file size in byte
+find inhere -type f -size 1033c ! -executable    -> find human-readable  ,1033 bytes in size  , not executable at once inside inhere directory
+            //imp**
+                find / -size 33c -user bandit7 -group bandit6 2>/tmp/null  -> redirect the erorr message to /tmp/null hiding the error noise
+                1>/tmp/null  -> Throws away normal output (1), while still showing errors (2). Useful when you only care if a command succeeded or failed.
+                0 -stdin ,1 -stdout ,2 -stderr ,  are descriptors
+                find / -size 33c -user bandit7 -group bandit6 2>/dev/null   ->Anything written to /dev/null is immediately discarded and vanishes.
+grep millionth data.txt  -> search millionth keyword inside data.txt
+
 
 
 
