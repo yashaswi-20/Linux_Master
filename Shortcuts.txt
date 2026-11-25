@@ -1,0 +1,9 @@
+
+Commenting Multiple Lines at Once
+
+• Start selection. Move your cursor to the first line you want to comment and press Alt+A (or Ctrl+6) to set a mark.
+• Highlight lines. Use the Up or Down arrow keys to highlight all the lines you want to include.
+• Apply comment. Press Alt+3 (or Esc then 3) to comment or uncomment the entire selected block.
+
+
+ctrl+alt+space -> toggle copilot in vscode

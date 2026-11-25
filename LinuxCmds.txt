@@ -1,0 +1,80 @@
+ncdu /  --->file and folder management
+port 53 for -> DNS resolver
+ctrl +r   -> for reverse search a command
+
+certbot ->for https tls certification in azure
+
+
+//Networking
+
+ifconfig
+netstat -tulnp  -> port currently being used
+traceroute -> ip hop tracing
+mtr -> ping & traceroute combined
+nslookup -> ip of a website
+telnet -> with portno
+hostname
+ip
+iwconfig ->wireless connection
+ss-> network stats
+arp-> router mac address
+dig ->dig deeper inside a url
+whois-> tells info of domain/registry for url
+
+curl https://dummyjson.com/products | jq      ->iq to show json res beautifully
+wget -> works like curl but used to download via link from internet
+iptables -> show iptable
+watch -> run a command every 2 minutes like watch df -h
+
+// log handling
+awk ->query inside log file but need csv or tsv data comma ,tab seperated data
+sed -> it work line by line
+grep
+file:///home/yashaswi/Desktop/awk_sed_grep.txt
+
+// ssh
+
+tailscale ->used for ssh into diff laptop with diff wifi network
+
+// abhishek top 10 commands
+
+pgrep nginx   ->to grep process id of any service
+pstree
+tcpdump -> packet flow information of primary network interface like eth0 with specific port
+df -h   -> complete disk information
+du -sh etc -> space consumed by specific folder like etc, opt
+ps -fp <PID> -> about process when you have process id
+journalctl -u nginx -> log of nginx
+lsof -i :80   -> which process is currently using this port
+tail -n 10 auth.log
+
+
+// interesting one
+
+alias lh='ls -lah'   -> create alias for ls -lah to lh
+crontab -e     -> create cronjob
+crontab -l  -> view cronjob
+* * * * * /home/yashaswi/demo_cron.sh      -> write job under demo_cron.sh file\
+ps aux | nl   -> process with line number (count)
+ps aux | wc -l   ->only line count
+ps aux | grep chrome | grep -v grep   -> this will not print the process stated by this command
+kill -STOP <pid>
+kill -CONT <pid>
+renice -n 10 <pid>   -> set priority of the any process (-19 to  20 ) lower no means higher priority
+
+
+//proces and service management
+
+systemctl list-units --type=service     -> list all the services active
+tmux -> run process in background
+tmux new-session -s practice
+watch -n 2 date
+tmux attach-session -t practice
+
+
+
+user permisssion ,  ssh , database connection , scp (copy file from local to remote mechine ) , background job allotment how to do ,  ec2 ,s3
+
+
+
+

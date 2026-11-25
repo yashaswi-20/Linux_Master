@@ -1,0 +1,37 @@
+
+// awk
+awk '{print $1}' app.log   -> column 1 print
+
+awk /main/'{print $1,$2,$3,$4,$5,$6}' app.log  -> filter main keyword line only
+
+awk '/main/{print $1,$2,$3,$4,$5,$6}' app.log > only_main.log
+
+awk '/main/{count++} END {print count}' app.log
+
+awk 'NR>=2 && NR<=10 {print}' app.log    -> no of records
+
+
+
+// sed
+
+
+sed '/main/ p' app.log
+
+sed -n '/main/ p' app.log     -> -n for strictly filter main keyword
+
+sed 's/main/log/g' app.log    -> replace main with log
+
+
+sed -n -e '/Thread/=' app.log   -> all the line number containing keyword thread
+
+sed '25,35 s/main/log/g' app.log    -> replace with particular line number
+
+sed '25,35 s/main/log/g; 25,40p; 50q' app.log
+
+
+
+//grep
+
+ps aux | grep chrome
+
+
