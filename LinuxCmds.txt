@@ -1,4 +1,11 @@
 ncdu /  --->file and folder management
+tldr -> to know about any commands
+fzf -> for searching file/direcotry live
+bat -> reading file instead of cat
+ranger -> navigation and reading files made easy
+glances -> better then top
+
+
 port 53 for -> DNS resolver
 ctrl +r   -> for reverse search a command
 
@@ -12,7 +19,9 @@ netstat -tulnp  -> port currently being used
 traceroute -> ip hop tracing
 mtr -> ping & traceroute combined
 nslookup -> ip of a website
-telnet -> with portno  (check if some port is open in remote server from local mechine)
+telnet / nc-> with portno  (check if some port is open in remote server from local mechine)
+        telnet localhost 30000  -> start tcp handshake and wait for input
+openssl s_client -connect localhost:30001   -> same as telnet but for ssl/Tls security
 hostname
 ip
 iwconfig ->wireless connection
@@ -75,6 +84,8 @@ nohup &  -> used to run background processes
 
 //file handling & searching
 
+echo "hello" > file.txt     -> single > will overwrite the file with just hello
+echo "hello" >> file.txt    -> double >> will append hello to last line of file.txt
 file ./-file* → Identifies the format/encoding safely without printing raw bytes.
 du -b inhere/maybehere07/.file2   -> exact file size in byte
 du -sh *  -> size of all the sub folder/file inside current folder
@@ -102,6 +113,9 @@ useradd -> just create user no home directory (use will scripting since no user 
 adduser -> create additional directory as well as home directory
 /etc/passwd  -> verify user created
 /etc/shadow -> store encrypted password of the user (no way to decrypt it)
+groupadd devops
+cat /etc/group
+usermod -aG devops yashaswi
 
 
 

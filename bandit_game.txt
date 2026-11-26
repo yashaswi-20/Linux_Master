@@ -9,3 +9,11 @@ bandit 7-> Bmnnvf82KzQlfxgAI2d1zYbr1u9pr3E3
 bandit 8 -> VR1ljMayciFxbnUokuQmJFw6QC9VKtub
 bandit 9 -> EjmOSvuAu7sGAHqHVcBDPirRe9T03kxl
 bandit 10 -> B0s2khmbT9u0geKuOoVGW3JZKhndE3BG
+bandit 11 -> pYfOY6HwUsDj5rL9UvyhU7MCmv8vN5Ro
+bandit 12 -> GROozWPO8QyN0mGrjUkID0WCYkZiQxrN
+ tr 'a-zA-Z' 'n-za-mN-ZA-M' < data.txt -> tr -> translate character range here with 13 character for eg. Gur will translate to The here
+bandit 13 -> qQYQiHOBPR8zR61qxYqX45quvihF2uzk  (hard)
+bandit 14 -> aaWecNkG4FhxJQxz07uiwzVP6bJiYS65
+bandit 15 -> pbLYuZtTg4MgaqfJx8jbA9gKKGqM68A7
+openssl s_client -connect localhost:30001
+bandit 16 -> kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V
