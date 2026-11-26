@@ -73,10 +73,11 @@ tmux attach-session -t practice
 nohup &  -> used to run background processes
 
 
-//file handling
+//file handling & searching
 
 file ./-file* → Identifies the format/encoding safely without printing raw bytes.
 du -b inhere/maybehere07/.file2   -> exact file size in byte
+du -sh *  -> size of all the sub folder/file inside current folder
 find inhere -type f -size 1033c ! -executable    -> find human-readable  ,1033 bytes in size  , not executable at once inside inhere directory
             //imp**
                 find / -size 33c -user bandit7 -group bandit6 2>/tmp/null  -> redirect the erorr message to /tmp/null hiding the error noise
@@ -84,11 +85,30 @@ find inhere -type f -size 1033c ! -executable    -> find human-readable  ,1033 b
                 0 -stdin ,1 -stdout ,2 -stderr ,  are descriptors
                 find / -size 33c -user bandit7 -group bandit6 2>/dev/null   ->Anything written to /dev/null is immediately discarded and vanishes.
 grep millionth data.txt  -> search millionth keyword inside data.txt
+sort data.txt | uniq -u  -> search unique line in a file here sorting is necessary since unique require identical line to be adjacent
+strings data.txt | grep '==='   ->strings + grep (best for pulling readable text out of binary files):strings extracts sequences of printable characters from binary data so you don't have to wade through raw bytes:
+
+        // add block storage to ec2 instance
+            go to elastic block storage and add and attach block there to ec2 instance then
+            lbslk , fdisk -l  -> check block storage
+            mkdir -p /mnt/demo-volume
+            mkfs -t ext4 /dev/nvme1n1  -> make filesystem / format
+        or  sudo mount -o ro /dev/nvme1n1p1 /mnt/recovery  -> if you dont want to formal the block if filesystem already exist
+            mount /dev/nvme1n1 /mnt/demo-volume   ->
+            done..
+
+//User MAnagement
+useradd -> just create user no home directory (use will scripting since no user interation is require)
+adduser -> create additional directory as well as home directory
+/etc/passwd  -> verify user created
+/etc/shadow -> store encrypted password of the user (no way to decrypt it)
 
 
 
 
-user permisssion ,  ssh , database connection , scp (copy file from local to remote mechine ) , background job allotment how to do ,  ec2 ,s3
+
+
+user permisssion ,  ssh , database connection , scp (copy file from local to remote mechine ) , background job allotment how to do ,  ec2 ,s3, iam
 
 
 
